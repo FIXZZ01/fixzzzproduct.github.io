@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Fixzz Panel Store</title>
+  <style>
+    * { font-weight: bold; }
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    p.description {
+      font-size: 13px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .panel-box {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 300px;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+      animation: fadeInUp 1s ease-out;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .panel-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    }
+
+    .btn-beli {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-beli:hover {
+      background-color: #cc0000;
+    }
+
+    footer {
+      font-size: 12px;
+      margin-top: 50px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>FIXZZ PANEL STORE</h1>
+  <p class="description">
+    Selamat Datang Di Web Buy Panel BY FIXZZ<br>
+    Jika Ingin Tahu Panel Itu Apa Klik Link Ini <a href="https://t.me/FizzOfficial" target="_blank">t.me/FizzOfficial</a>
+  </p>
+
+  <div class="panel-box">
+    <h2>Panel Unli</h2>
+    <p>Mulai dari Rp6.000</p>
+    <button class="btn-beli" onclick="beli('Panel Unli')">Beli Sekarang</button>
+  </div>
+
+  <div class="panel-box">
+    <h2>Reseller Panel</h2>
+    <p>Mulai dari Rp5.000</p>
+    <button class="btn-beli" onclick="beli('Reseller Panel')">Beli Sekarang</button>
+  </div>
+
+  <div class="panel-box">
+    <h2>Admin Panel</h2>
+    <p>Mulai dari Rp12.000</p>
+    <button class="btn-beli" onclick="beli('Admin Panel')">Beli Sekarang</button>
+  </div>
+
+  <div class="panel-box">
+    <h2>PT Panel</h2>
+    <p>Mulai dari Rp15.000</p>
+    <button class="btn-beli" onclick="beli('PT Panel')">Beli Sekarang</button>
+  </div>
+
+  <div class="panel-box">
+    <h2>Own Panel</h2>
+    <p>Mulai dari Rp18.000</p>
+    <button class="btn-beli" onclick="beli('Own Panel')">Beli Sekarang</button>
+  </div>
+
+  <footer>
+    COPYRIGHT POWERED BY FIXZZ & ALWAYS KYZEN<br>
+    <a href="https://fixzzproduct.com" target="_blank">https://fixzzproduct.com</a>
+  </footer>
+
+  <script>
+    function beli(namaPanel) {
+      const konfirmasi = confirm(`Apakah Anda yakin ingin membeli ${namaPanel}?`);
+      if (konfirmasi) {
+        const pesan = encodeURIComponent("BANG FIXZ BELI PANEL DONK");
+        window.location.href = `https://t.me/FizzOfficial?text=${pesan}`;
+      }
+    }
+  </script>
+
+</body>
+</html>
